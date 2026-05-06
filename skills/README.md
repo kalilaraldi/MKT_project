@@ -18,6 +18,7 @@ npx opensquad install <skill-name>
 | [image-fetcher](./image-fetcher/) | hybrid | Acquire visual assets via web search, live screenshots (Playwright), and user-provided files. | _(none)_ | `npx opensquad install image-fetcher` |
 | [image-creator](./image-creator/) | mcp | Render HTML/CSS into production-ready PNG images via Playwright. | _(none)_ | `npx opensquad install image-creator` |
 | [image-ai-generator](./image-ai-generator/) | script | Generate AI images via Openrouter API. Test mode (cheap) and production mode (high-quality). Supports reference images for brand consistency. | `OPENROUTER_API_KEY` | `npx opensquad install image-ai-generator` |
+| [slack](./slack/) | script | Envie notificações e relatórios formatados para o Slack via Webhooks. | `SLACK_WEBHOOK_URL` | `npx opensquad install slack` |
 
 ## Skill Types
 
@@ -51,6 +52,10 @@ skills/
     SKILL.md
     scripts/
       generate.py
+  slack/
+    SKILL.md
+    scripts/
+      send-webhook.js
 ```
 
 The `SKILL.md` file contains YAML frontmatter (name, type, version, MCP/script config, env vars, categories) and a Markdown body with usage instructions and available operations.
